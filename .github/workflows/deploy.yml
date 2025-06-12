@@ -17,10 +17,10 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run build --base-href=/icoc-mypledge-web-app/
+          npm run build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BRANCH: gh-pages
-          FOLDER: dist/icoc-mypledge-web-app
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist/icoc-mypledge-web-app
