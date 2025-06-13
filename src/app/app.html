@@ -1,233 +1,66 @@
-<header>
+<mat-toolbar color="primary">
+  <button mat-icon-button aria-label="Menu icon" id="nav-icon" (click)="toggleMenu()">
+<!--    <mat-icon>menu</mat-icon>-->
+    <img ngSrc="/icon.png" alt="alt" height="152" width="153">
+  </button>
+  <h2>ICOC PH | MyPledge</h2>
+</mat-toolbar>
+<mat-sidenav-container autosize>
+  <mat-sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
+    <mat-nav-list>
+      @if (!isCollapsed) {
+      <a routerLink="/home" mat-list-item>
+        <span class="entry">
+          <mat-icon>house</mat-icon>
+             <span>Dashboard</span>
+        </span>
+      </a>
+        <a routerLink="/pledges" mat-list-item>
+        <span class="entry">
+          <mat-icon>money</mat-icon>
+             <span>Pledges</span>
+        </span>
+        </a>
+        <a routerLink="/reports" mat-list-item>
+        <span class="entry">
+          <mat-icon>insert_chart</mat-icon>
+             <span>Reports</span>
+        </span>
+        </a>
 
-  <hgroup>
-    <h1>My Pledge</h1>
-    <h3>ICOC PH|Mandaluyong-West Pasig</h3>
-  </hgroup>
-  <nav>
-    <ul>
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
-      <a href="">Sign in</a>
-      <a href="">Sign up</a>
-    </ul>
-  </nav>
-</header>
+        <a routerLink="/profile" mat-list-item>
+        <span class="entry">
+          <mat-icon>person</mat-icon>
+             <span>Profile</span>
+        </span>
+        </a>
+        <a routerLink="/contact-us" mat-list-item>
+        <span class="entry">
+          <mat-icon>contacts</mat-icon>
+             <span>Contact Us</span>
+        </span>
+        </a>
+        <a routerLink="/about-us" mat-list-item>
+        <span class="entry">
+          <mat-icon>info</mat-icon>
+             <span>About Us</span>
+        </span>
+        </a>
+        <a routerLink="/login" mat-list-item>
+        <span class="entry">
+          <mat-icon>keys</mat-icon>
+             <span>Login</span>
+        </span>
+        </a>
 
-<main>
-  <section>
-    <article>
-      <h3>Member lookup</h3>
-      <p></p>
-      <table>
+      }
+    </mat-nav-list>
 
-        <caption>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </caption>
-        <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Middle Name</th>
-          <th>Last Name</th>
-          <th>Nick Name</th>
-          <th>SB</th>
-          <th>PB</th>
-          <th>Gender</th>
-          <th>Ministry</th>
-          <th>Zone</th>
-          <th>Bible Talk</th>
-          <th>Designation</th>
-          <th>Status</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>001</td>
-          <td>John</td>
-          <td>Middle</td>
-          <td>Doe</td>
-          <td>Manager</td>
-          <td>j.doe&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>002</td>
-          <td>Jane</td>
-          <td></td>
-          <td>Smith</td>
-          <td>Developer</td>
-          <td>jane.smith&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>003</td>
-          <td>Alice</td>
-          <td></td>
-          <td>Johnson</td>
-          <td>Designer</td>
-          <td>alice.j&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>004</td>
-          <td>Bob</td>
-          <td></td>
-          <td>Williams</td>
-          <td>Tester</td>
-          <td>bob.w&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>005</td>
-          <td>Charlie</td>
-          <td></td>
-          <td>Brown</td>
-          <td>Analyst</td>
-          <td>charlie.b&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>006</td>
-          <td>David</td>
-          <td></td>
-          <td>Miller</td>
-          <td>Support</td>
-          <td>d.miller&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>007</td>
-          <td>Elaine</td>
-          <td></td>
-          <td>Thompson</td>
-          <td>HR</td>
-          <td>elaine.t&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>008</td>
-          <td>Frank</td>
-          <td></td>
-          <td>White</td>
-          <td>Sales</td>
-          <td>frank.w&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>009</td>
-          <td>Grace</td>
-          <td></td>
-          <td>Black</td>
-          <td>Marketing</td>
-          <td>grace.b&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>010</td>
-          <td>Henry</td>
-          <td></td>
-          <td>Jones</td>
-          <td>Intern</td>
-          <td>henry.jdoe&#64;example.com</td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-          <td colspan="5">Member Directory - 2025</td>
-        </tr>
-        </tfoot>
-      </table>
-    </article>
-  </section>
-  <section>
-    <article>
-      <h3>In progress</h3>
-      <p></p>
-    </article>
-  </section>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <section class="main-container">
+    <router-outlet></router-outlet>
+    </section>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
-  <section>
-    <article>
-      <h3>In progress</h3>
-      <p>
-      </p>
-    </article>
-  </section>
-  <section>
-    <mark>In Progress.</mark>
-  </section>
-  <aside>
-    <h3>Related Links</h3>
-    <ul>
-    </ul>
-  </aside>
-</main>
-<footer>
-  <p>&copy; ICOC PH Mandaluyong-West Pasig</p>
-</footer>
