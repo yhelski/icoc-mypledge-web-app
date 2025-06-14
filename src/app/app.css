@@ -39,6 +39,11 @@ h1 {
     background-color: #206339;
     bottom: 5px;
   }
+  h1 {
+    text-align: left;
+    width: 100%;
+    padding: 0 0 0 10px;
+  }
 }
 
 /*desktop*/
@@ -121,6 +126,10 @@ mat-sidenav-content{
 em {
   font-family: "Monotype Corsiva", sans-serif;
   font-size: 40px;
+}
+
+strong {
+  color: slategray;
 }
 span.mat-mdc-button-touch-target {
   height: 500px;
