@@ -4,11 +4,14 @@
     <caption>
       <form>
         <label for="submit" >Member lookup </label>
-        <input class="" type="search" placeholder="Search" aria-label="Search">
-        <button class="" type="submit" id="submit">Search</button>
+          <select (change)="selectChangeHandler($event)">
+        <input class="" type="input" placeholder="Search" aria-label="Search">
+              <option *ngFor="let member of members; " [ngValue]="member">
+                  {{member.firstName}}
+              </option>
+          </select>
       </form>
     </caption>
-    {{members | json}}
     <table>
       <thead>
       <tr >

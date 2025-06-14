@@ -1,17 +1,93 @@
-
-
 h1 {
-  padding: 0 1rem;
+  padding: 6px 0 0px 10px;
+  font-weight: bold;
+  font-size: large;
+  color: #06572EFF;
 }
 
-h2 {padding: 1rem;}
+/*#login-button {*/
+/*  position: fixed;*/
+/*  !* Default styles for desktop *!*/
+/*  top: 0;*/
+/*  right: 0;*/
+/*  z-index: 10; !* Ensure it's on top of other content *!*/
+/*}*/
+
+/* Mobile Styles */
+@media (max-width: 450px) {
+  #auth-container {
+    top: auto;
+    bottom: 0;
+    width: 200px;
+    position: relative;
+    border-radius: 1px;
+    /* Other mobile specific styles */
+  }
+  div.login-container, div.logout-container {
+    color: #696969FF;
+    position: relative;
+    border: 1px solid #696969FF;
+    border-radius: 10px;
+    text-align: center;
+    /*width: 96%*/
+  }
+  div.login-container {
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+  }
+  div.logout-container {
+    background-color: #206339;
+    bottom: 5px;
+  }
+}
+
+/*desktop*/
+@media (min-width: 450px) {
+  #auth-container {
+    top: 0;
+    right: 0;
+    width: 10%;
+    position: fixed;
+    background-color: black;
+    /*position: inherit;*/
+    /*display: flex;*/
+    /* Other mobile specific styles */
+  }
+  div.login-container, div.logout-container {
+    right: 20px;
+    left: 90%;
+    /*color: #696969FF;*/
+    position: inherit;
+    border: 1px solid #696969FF;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    bottom: 500px;
+    display: inline-flex;
+  }
+
+  div.login-container {
+    background-color: whitesmoke;
+  }
+  div.logout-container {
+    background-color: #206339;
+    margin-left: 5px;
+
+  }
+}
+
+
+
+
 
 mat-toolbar{
-  background-color: #206339;
+  background-color: whitesmoke;
   color: whitesmoke;
   position:fixed;
   top:0;
   z-index: 2;
+  height: 120px;
+  border-bottom: 2px solid #206339;
 }
 
 mat-sidenav-container {
@@ -20,7 +96,7 @@ mat-sidenav-container {
 
 /*// Move the content down so that it won't be hidden by the toolbar*/
 mat-sidenav {
-  padding-top: 3.5rem;
+  padding-top: 64px;
   @media screen and (min-width: 600px) {
     padding-top: 4rem;
   }
@@ -42,20 +118,35 @@ mat-sidenav-content{
   }
 }
 
+em {
+  font-family: "Monotype Corsiva", sans-serif;
+  font-size: 40px;
+}
+span.mat-mdc-button-touch-target {
+  height: 500px;
+  width: 200px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
 .mat-mdc-icon-button {
   color: whitesmoke;
 }
 
 .entry:hover {
-  border-radius: 0; !important;
-  color: #5d9dc0;
+  border-radius: 0;
+  color: #06572e;
 }
 
 .mat-drawer {
   width: auto;
+  padding-top: 120px;
 }
 
 .main-container {
-  margin: 20px 20px auto;
+  padding-top: 64px;
   position: relative;
 }

@@ -1,9 +1,10 @@
 <mat-toolbar color="primary">
   <button mat-icon-button aria-label="Menu icon" id="nav-icon" (click)="toggleMenu()">
 <!--    <mat-icon>menu</mat-icon>-->
-    <img ngSrc="/icon.png" alt="alt" height="152" width="153">
+    <img ngSrc="/icon.png" class="header-icon" alt="alt" height="200" width="200">
   </button>
-  <h2>ICOC PH | MyPledge</h2>
+  <h1>ICOC PH | <em>MyPledge</em></h1>
+
 </mat-toolbar>
 <mat-sidenav-container autosize>
   <mat-sidenav [mode]="isMobile ? 'over' : 'side'" [opened]="isMobile ? 'false' : 'true'">
@@ -46,12 +47,6 @@
              <span>About Us</span>
         </span>
         </a>
-        <a routerLink="/login" mat-list-item>
-        <span class="entry">
-          <mat-icon>keys</mat-icon>
-             <span>Login</span>
-        </span>
-        </a>
 
       }
     </mat-nav-list>
@@ -63,4 +58,20 @@
     </section>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<div class="auth-container">
+  <div class="login-container">
+    <a class="login-button" routerLink="/login" mat-list-item>
+        <span class="entry">
+             <span>Login</span>
+        </span>
+    </a>
+  </div>
+  <div class="logout-container">
+    <a class="logout-button" routerLink="/login" mat-list-item>
+        <span class="entry">
+             <span>logout</span>
+        </span>
+    </a>
+  </div>
+</div>
 

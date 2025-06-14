@@ -1,15 +1,25 @@
-
+article {
+  margin:5px 5px auto;
+}
 
 table {
   width: 100%;
-  max-width: 800px;
   border-collapse: collapse;
+  margin: 5px 0 0 0;
+  display: table;
   box-shadow: 0 0 30px rgba(0,0,0,0.3);
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 450px) {
+  table, td, tr {
+    display: table;
+    width: 100%;
+    margin: 5px 0 0 0;
+  }
+}
 table, th, td {
-  border: 1px solid #5d9dc0;
+  border: 1px solid lightgray;
 }
 
 caption {
@@ -21,15 +31,28 @@ caption {
   background-color: whitesmoke;
   border-radius: 5px 5px 0 0;
 }
-
-thead {
-  background-color: #3864ad;
+.search-button {
+  background-color: #206339;
   color: white;
+}
+thead {
+  background-color: whitesmoke;
+  color: dimgrey;
+  font-size: 11px;
 }
 
 th, td {
   padding: 10px 15px;
   text-align: left;
+}
+tr {
+  display: grid;
+  min-width: 20px;
+  grid-auto-columns: minmax(0, 1fr);
+  grid-auto-flow: column;
+}
+th {
+  text-align: center;
 }
 
 tbody tr:nth-child(even) {
@@ -53,4 +76,68 @@ tfoot tr {
   position: relative;
   box-shadow: 0 0 30px rgba(0,0,0,0.3);
   border-radius: 5px;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 450px) {
+  #auth-container {
+    top: auto;
+    bottom: 0;
+    width: 200px;
+    position: relative;
+    border-radius: 1px;
+    /* Other mobile specific styles */
+  }
+  div.login-container, div.logout-container {
+    color: #696969FF;
+    position: relative;
+    border: 1px solid #696969FF;
+    border-radius: 10px;
+    text-align: center;
+    /*width: 96%*/
+  }
+  div.login-container {
+    background-color: whitesmoke;
+    margin-bottom: 10px;
+  }
+  div.logout-container {
+    background-color: #206339;
+    bottom: 5px;
+  }
+}
+
+/*desktop*/
+@media (min-width: 450px) {
+  #auth-container {
+    top: 0;
+    right: 0;
+    width: 10%;
+    position: fixed;
+    background-color: black;
+    /*position: inherit;*/
+    /*display: flex;*/
+    /* Other mobile specific styles */
+  }
+  div.login-container, div.logout-container {
+    right: 20px;
+    left: 90%;
+    /*color: #696969FF;*/
+    position: inherit;
+    border: 1px solid #696969FF;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    bottom: 500px;
+    display: inline-flex;
+  }
+
+  div.login-container {
+    background-color: whitesmoke;
+  }
+  div.logout-container {
+    background-color: #206339;
+    margin-left: 5px;
+
+  }
 }

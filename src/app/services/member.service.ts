@@ -11,7 +11,6 @@ import {MemberTO} from '../models/MemberTO';
 })
 export class MemberService {
   memberUrl = environment.memberUrl;
-  private memberTos: any[] = [];
 
   constructor(private httpClient: HttpClient) {
   }
